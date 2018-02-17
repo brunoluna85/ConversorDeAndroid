@@ -15,7 +15,10 @@ public class MenuActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+        //criando objetos dos elementos da tela
         buttonTemperatura = (Button) findViewById(R.id.buttonTemperatura);
+
+        //criando listeners dos botões da tela
         buttonTemperatura.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
