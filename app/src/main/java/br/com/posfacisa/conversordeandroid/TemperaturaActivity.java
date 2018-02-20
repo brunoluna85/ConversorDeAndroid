@@ -46,8 +46,8 @@ public class TemperaturaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try{
-                    float valor = Float.valueOf(editTextOrigem.getText().toString()); //NumberFormatException
-                    float resultado;
+                    double valor = Double.valueOf(editTextOrigem.getText().toString()); //NumberFormatException
+                    double resultado;
                     if (textViewOrigem.getText().toString().equals("Celsius"))
                         resultado = Conversor.celsiusToFahrenheit(valor);
                     else
