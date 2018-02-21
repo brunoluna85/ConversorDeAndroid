@@ -35,12 +35,12 @@ public class TemperaturaRobotiumTest extends ActivityInstrumentationTestCase2<Te
 
         String resultado = solo.getEditText(1).getText().toString();
 
-        boolean isRight = resultado.equals("212.0");
+        boolean isRight = resultado.equals("212");
         assertTrue("Valor não confere: ",isRight);
     }
 
     public void testConvertFahrenheitToCelsius() throws Exception{
-        Button buttonInverter = (Button) solo.getView("buttonInverter");
+        Button buttonInverter = (Button) solo.getView("buttonInverterTemp");
         solo.clickOnView(buttonInverter);
         //solo.clickOnView(solo.getView("buttonInverter"));
 
@@ -50,10 +50,7 @@ public class TemperaturaRobotiumTest extends ActivityInstrumentationTestCase2<Te
 
         String resultado = solo.getEditText(1).getText().toString();
 
-        boolean isRight = resultado.equals("100.0");
+        boolean isRight = resultado.equals("100");
         assertTrue("Valor não confere: ",isRight);
-
-
-
     }
 }

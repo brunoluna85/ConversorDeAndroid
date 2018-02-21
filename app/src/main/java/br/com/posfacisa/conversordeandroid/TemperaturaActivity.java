@@ -8,6 +8,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 import br.com.posfacisa.conversordeandroid.models.Conversor;
 
 public class TemperaturaActivity extends AppCompatActivity {
@@ -19,25 +21,27 @@ public class TemperaturaActivity extends AppCompatActivity {
     private EditText editTextDestino;
     private EditText editTextOrigem;
 
+    private DecimalFormat formatador = new DecimalFormat("0.##");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_temperatura);
 
         //criando objetos dos elementos da tela
-        textViewOrigem = (TextView) findViewById(R.id.textViewOrigem);
-        textViewDestino = (TextView) findViewById(R.id.textViewDestino);
-        buttonInverter = (Button) findViewById(R.id.buttonInverter);
-        buttonConverter = (Button) findViewById(R.id.buttonConverter);
-        editTextOrigem = (EditText) findViewById(R.id.editTextOrigem);
-        editTextDestino = (EditText) findViewById(R.id.editTextDestino);
+        textViewOrigem = (TextView) findViewById(R.id.textViewOrigemTemp);
+        textViewDestino = (TextView) findViewById(R.id.textViewDestinoTemp);
+        buttonInverter = (Button) findViewById(R.id.buttonInverterTemp);
+        buttonConverter = (Button) findViewById(R.id.buttonConverterTemp);
+        editTextOrigem = (EditText) findViewById(R.id.editTextOrigemTemp);
+        editTextDestino = (EditText) findViewById(R.id.editTextDestinoTemp);
 
         //criando listeners dos botões
 
         buttonInverter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                switchText(textViewOrigem,textViewDestino);
+                TelaUtil.switchText(textViewOrigem,textViewDestino);
                 editTextDestino.setText("");
             }
         });
@@ -52,7 +56,7 @@ public class TemperaturaActivity extends AppCompatActivity {
                         resultado = (new Conversor()).celsiusToFahrenheit(valor);
                     else
                         resultado = (new Conversor()).fahrenheitToCelsius(valor);
-                    editTextDestino.setText(resultado+"");
+                    editTextDestino.setText(formatador.format(resultado));
                 }catch(NumberFormatException ex){
                     Toast.makeText(getApplicationContext(), "Campo vazio!", Toast.LENGTH_SHORT).show();
                 }
@@ -61,11 +65,4 @@ public class TemperaturaActivity extends AppCompatActivity {
         });
     }
 
-    private void switchText(TextView origem, TextView destino){
-        String nomeOrigem = origem.getText().toString();
-        String nomeDestino = destino.getText().toString();
-
-        origem.setText(nomeDestino);
-        destino.setText(nomeOrigem);
-    }
 }

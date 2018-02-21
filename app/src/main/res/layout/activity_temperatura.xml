@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewOrigem"
+        android:id="@+id/textViewOrigemTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -28,12 +28,12 @@
         android:layout_weight="1"
         android:text="Celsius"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextOrigem"
-        app:layout_constraintEnd_toStartOf="@+id/editTextOrigem"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextOrigemTemp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextOrigemTemp"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextOrigem"
+        android:id="@+id/editTextOrigemTemp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -42,11 +42,12 @@
         android:ems="10"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewOrigem"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTemp" />
+        app:layout_constraintStart_toEndOf="@+id/textViewOrigemTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTemp"
+        android:layout_marginRight="8dp" />
 
     <TextView
-        android:id="@+id/textViewDestino"
+        android:id="@+id/textViewDestinoTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -54,12 +55,12 @@
         android:layout_weight="1"
         android:text="Fahrenheit"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/editTextDestino"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDestinoTemp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextOrigem" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrigemTemp" />
 
     <EditText
-        android:id="@+id/editTextDestino"
+        android:id="@+id/editTextDestinoTemp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="7dp"
@@ -70,11 +71,12 @@
         android:enabled="false"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewDestino"
-        app:layout_constraintTop_toTopOf="@+id/editTextOrigem" />
+        app:layout_constraintStart_toEndOf="@+id/textViewDestinoTemp"
+        app:layout_constraintTop_toTopOf="@+id/editTextOrigemTemp"
+        android:layout_marginRight="7dp" />
 
     <Button
-        android:id="@+id/buttonInverter"
+        android:id="@+id/buttonInverterTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -83,10 +85,10 @@
         android:text="Inverter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDestino" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDestinoTemp" />
 
     <Button
-        android:id="@+id/buttonConverter"
+        android:id="@+id/buttonConverterTemp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -95,5 +97,5 @@
         android:text="Converter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInverter" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonInverterTemp" />
 </android.support.constraint.ConstraintLayout>

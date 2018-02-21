@@ -27,7 +27,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void fahrenheitToCelsiusTest() throws Exception{
+    public void testFahrenheitToCelsius() throws Exception{
         double input = 212;
         double output;
         double expected = 100;
@@ -45,7 +45,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void celsiusToFahrenheitTest() throws Exception{
+    public void testCelsiusToFahrenheit() throws Exception{
         double input = 37;
         double output;
         double expected = 98.6;
@@ -63,7 +63,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void centimetersToInchesTest() throws Exception{
+    public void testCentimetersToInches() throws Exception{
         double input = 100;
         double output;
         double expected = 39.37;
@@ -74,7 +74,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void inchesToCentimetersTest() throws Exception{
+    public void testInchesToCentimeters() throws Exception{
         double input = 39.37;
         double output;
         double expected = 100;
@@ -85,7 +85,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void kgToPoundTest() throws Exception{
+    public void testKgToPound() throws Exception{
         double input = 10;
         double output;
         double expected = 22.04;
@@ -96,7 +96,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void poundToKgTest() throws Exception{
+    public void testPoundToKg() throws Exception{
         double input = 22.04;
         double output;
         double expected = 10;
@@ -107,7 +107,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void squareMetersToHectaresTest() throws Exception{
+    public void testSquareMetersToHectares() throws Exception{
         double input = 2500;
         double output;
         double expected = 0.25;
@@ -118,7 +118,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void hectaresToSquareMetersTest() throws Exception{
+    public void testHectaresToSquareMeters() throws Exception{
         double input = 0.25;
         double output;
         double expected = 2500;
@@ -129,7 +129,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void litersToGallonsTest() throws Exception{
+    public void testLitersToGallons() throws Exception{
         double input = 100;
         double output;
         double expected = 26.41;
@@ -140,7 +140,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void gallonsToLitersTest() throws Exception{
+    public void testGallonsToLiters() throws Exception{
         double input = 26.41;
         double output;
         double expected = 100;
@@ -151,7 +151,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void kmToMilesTest() throws Exception{
+    public void testKmToMiles() throws Exception{
         double input = 100;
         double output;
         double expected = 62.13;
@@ -162,7 +162,7 @@ public class ConversorTest{
     }
 
     @Test
-    public void milesToKmTest() throws Exception{
+    public void testMilesToKm() throws Exception{
         double input = 62.13;
         double output;
         double expected = 100;

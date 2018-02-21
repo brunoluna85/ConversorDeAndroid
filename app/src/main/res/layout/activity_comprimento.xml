@@ -6,4 +6,97 @@
     android:layout_height="match_parent"
     tools:context="br.com.posfacisa.conversordeandroid.ComprimentoActivity">
 
+    <TextView
+        android:id="@+id/textViewComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Comprimento"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewOrigemComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="Centímetros"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextOrigemComp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextOrigemComp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextOrigemComp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewOrigemComp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewComp"
+        android:layout_marginRight="8dp" />
+
+    <TextView
+        android:id="@+id/textViewDestinoComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="Polegadas"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextDestinoComp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrigemComp" />
+
+    <EditText
+        android:id="@+id/editTextDestinoComp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
+        android:layout_marginTop="31dp"
+        android:layout_weight="1"
+        android:editable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewDestinoComp"
+        app:layout_constraintTop_toTopOf="@+id/editTextOrigemComp"
+        android:layout_marginRight="7dp" />
+
+    <Button
+        android:id="@+id/buttonInverterComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Inverter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDestinoComp" />
+
+    <Button
+        android:id="@+id/buttonConverterComp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Converter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInverterComp" />
+
 </android.support.constraint.ConstraintLayout>
