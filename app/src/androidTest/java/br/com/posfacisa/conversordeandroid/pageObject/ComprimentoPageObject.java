@@ -16,7 +16,6 @@ public class ComprimentoPageObject {
 
     private EditText editTextOrigem;
     private EditText editTextDestino;
-
     private Button buttonInverter;
     private Button buttonConverter;
 
@@ -29,6 +28,7 @@ public class ComprimentoPageObject {
         editTextOrigem = (EditText) solo.getView(R.id.editTextOrigemComp);
         editTextDestino = (EditText) solo.getView(R.id.editTextDestinoComp);
         buttonConverter = (Button) solo.getView(R.id.buttonConverterComp);
+        buttonInverter = (Button) solo.getView(R.id.buttonInverterComp);
     }
 
 
@@ -41,7 +41,11 @@ public class ComprimentoPageObject {
     }
 
     public String pegarValorDestino() {
-        return solo.getEditText(1).getText().toString();
-        //return solo.getString(R.id.editTextDestinoComp);
+        initCampos();
+        return editTextDestino.getText().toString();
+    }
+
+    public void clickBotaoInverter() {
+        solo.clickOnView(buttonInverter);
     }
 }

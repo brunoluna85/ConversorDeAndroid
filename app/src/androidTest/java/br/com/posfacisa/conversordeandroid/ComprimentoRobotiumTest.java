@@ -38,4 +38,14 @@ public class ComprimentoRobotiumTest extends ActivityInstrumentationTestCase2<Co
         String resultado = comprimentoPage.pegarValorDestino();
         assertEquals(resultadoEsperado, resultado);
     }
+
+    public void testConvertInchesToCentimeters() throws Exception{
+        String valor = "39.37";
+        String resultadoEsperado = "100";
+        comprimentoPage.clickBotaoInverter();
+        comprimentoPage.preencherOrigem(valor);
+        comprimentoPage.clickBotaoConverter();
+        String resultado = comprimentoPage.pegarValorDestino();
+        assertEquals(resultadoEsperado, resultado);
+    }
 }
