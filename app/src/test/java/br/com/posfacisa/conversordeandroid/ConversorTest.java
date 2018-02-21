@@ -1,5 +1,7 @@
 package br.com.posfacisa.conversordeandroid;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import br.com.posfacisa.conversordeandroid.models.Conversor;
@@ -12,6 +14,18 @@ import static org.junit.Assert.*;
 
 public class ConversorTest{
 
+    private Conversor conversor;
+
+    @Before
+    public void setUp() throws Exception {
+        conversor = new Conversor();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        conversor.fecharConexao();
+    }
+
     @Test
     public void fahrenheitToCelsiusTest() throws Exception{
         double input = 212;
@@ -19,14 +33,14 @@ public class ConversorTest{
         double expected = 100;
         double delta = 0.1;
 
-        output = Conversor.fahrenheitToCelsius(input);
+        output = conversor.fahrenheitToCelsius(input);
         assertEquals(expected, output, delta);
 
         input = 98.6;
         output = 0;
         expected = 37;
 
-        output = Conversor.fahrenheitToCelsius(input);
+        output = conversor.fahrenheitToCelsius(input);
         assertEquals(expected, output, delta);
     }
 
@@ -37,14 +51,14 @@ public class ConversorTest{
         double expected = 98.6;
         double delta = 0.1;
 
-        output = Conversor.celsiusToFahrenheit(input);
+        output = conversor.celsiusToFahrenheit(input);
         assertEquals(expected, output, delta);
 
         input = 100;
         output = 0;
         expected = 212;
 
-        output = Conversor.celsiusToFahrenheit(input);
+        output = conversor.celsiusToFahrenheit(input);
         assertEquals(expected, output, delta);
     }
 
@@ -55,7 +69,7 @@ public class ConversorTest{
         double expected = 39.37;
         double delta = 0.01;
 
-        output = Conversor.centimetersToInches(input);
+        output = conversor.centimetersToInches(input);
         assertEquals(expected, output, delta);
     }
 
@@ -66,7 +80,7 @@ public class ConversorTest{
         double expected = 100;
         double delta = 0.01;
 
-        output = Conversor.inchesToCentimeters(input);
+        output = conversor.inchesToCentimeters(input);
         assertEquals(expected, output, delta);
     }
 
@@ -77,7 +91,7 @@ public class ConversorTest{
         double expected = 22.04;
         double delta = 0.01;
 
-        output = Conversor.kgToPound(input);
+        output = conversor.kgToPound(input);
         assertEquals(expected,output,delta);
     }
 
@@ -88,7 +102,7 @@ public class ConversorTest{
         double expected = 10;
         double delta = 0.01;
 
-        output = Conversor.poundToKg(input);
+        output = conversor.poundToKg(input);
         assertEquals(expected,output,delta);
     }
 
@@ -99,7 +113,7 @@ public class ConversorTest{
         double expected = 0.25;
         double delta = 0.01;
 
-        output = Conversor.squareMetersToHectares(input);
+        output = conversor.squareMetersToHectares(input);
         assertEquals(expected, output, delta);
     }
 
@@ -110,7 +124,7 @@ public class ConversorTest{
         double expected = 2500;
         double delta = 0.01;
 
-        output = Conversor.hectaresToSquareMeters(input);
+        output = conversor.hectaresToSquareMeters(input);
         assertEquals(expected, output, delta);
     }
 
@@ -121,7 +135,7 @@ public class ConversorTest{
         double expected = 26.41;
         double delta = 0.1;
 
-        output = Conversor.litersToGallons(input);
+        output = conversor.litersToGallons(input);
         assertEquals(expected, output, delta);
     }
 
@@ -132,7 +146,7 @@ public class ConversorTest{
         double expected = 100;
         double delta = 0.1;
 
-        output = Conversor.gallonsToLiters(input);
+        output = conversor.gallonsToLiters(input);
         assertEquals(expected, output, delta);
     }
 
@@ -143,7 +157,7 @@ public class ConversorTest{
         double expected = 62.13;
         double delta = 0.2;
 
-        output = Conversor.kmToMiles(input);
+        output = conversor.kmToMiles(input);
         assertEquals(expected, output, delta);
     }
 
@@ -154,7 +168,7 @@ public class ConversorTest{
         double expected = 100;
         double delta = 0.2;
 
-        output = Conversor.milesToKm(input);
+        output = conversor.milesToKm(input);
         assertEquals(expected, output, delta);
     }
 

@@ -49,9 +49,9 @@ public class TemperaturaActivity extends AppCompatActivity {
                     double valor = Double.valueOf(editTextOrigem.getText().toString()); //NumberFormatException
                     double resultado;
                     if (textViewOrigem.getText().toString().equals("Celsius"))
-                        resultado = Conversor.celsiusToFahrenheit(valor);
+                        resultado = (new Conversor()).celsiusToFahrenheit(valor);
                     else
-                        resultado = Conversor.fahrenheitToCelsius(valor);
+                        resultado = (new Conversor()).fahrenheitToCelsius(valor);
                     editTextDestino.setText(resultado+"");
                 }catch(NumberFormatException ex){
                     Toast.makeText(getApplicationContext(), "Campo vazio!", Toast.LENGTH_SHORT).show();
