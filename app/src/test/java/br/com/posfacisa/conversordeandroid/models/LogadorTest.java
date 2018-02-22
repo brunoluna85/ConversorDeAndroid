@@ -11,7 +11,7 @@ public class LogadorTest {
 
     @Test
     public void testAdd() throws Exception{
-        String username = "asd";
+        String username = "testAdd";
         String senha = "123";
 
         Logador.add(new Pessoa(username, senha));
@@ -28,12 +28,21 @@ public class LogadorTest {
 
     @Test
     public void testLogar() throws Exception{
-        String username = "asd";
+        String username = "testLogar";
         String senha = "123";
 
         Logador.getListaDeUsuarios().add(new Pessoa(username, senha));
 
         boolean isValid = Logador.logar(username, senha);
         assertTrue("Usuário não logou",isValid);
+    }
+
+    @Test
+    public void testLoginInexistente() throws Exception{
+        String username = "testSemLogin";
+        String senha = "123";
+
+        boolean isValid = Logador.logar(username, senha);
+        assertFalse("Usuário logou sem ter usuário existente",isValid);
     }
 }

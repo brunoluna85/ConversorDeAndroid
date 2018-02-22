@@ -1,6 +1,7 @@
 package br.com.posfacisa.conversordeandroid;
 
 import android.test.ActivityInstrumentationTestCase2;
+import android.view.KeyEvent;
 
 import com.robotium.solo.Solo;
 
@@ -28,6 +29,22 @@ public class MenuRobotiumTest extends ActivityInstrumentationTestCase2<MenuActiv
 
     public void testAccessTemperature() throws Exception{
         solo.clickOnButton("Temperatura");
-        solo.assertCurrentActivity("Não está na activity correta", TemperaturaActivity.class);
+        solo.assertCurrentActivity("Não está na activity Temperatura", TemperaturaActivity.class);
+        solo.sendKey(KeyEvent.KEYCODE_BACK);
+        solo.assertCurrentActivity("Não está na activity Menu", MenuActivity.class);
+    }
+
+    public void testAccessComprimento() throws Exception{
+        solo.clickOnButton("Comprimento");
+        solo.assertCurrentActivity("Não está na activity Comprimento", ComprimentoActivity.class);
+        solo.sendKey(KeyEvent.KEYCODE_BACK);
+        solo.assertCurrentActivity("Não está na activity Menu", MenuActivity.class);
+    }
+
+    public void testAccessLogin() throws Exception{
+        solo.clickOnButton("Login");
+        solo.assertCurrentActivity("Não está na activity Login", LoginActivity.class);
+        solo.sendKey(KeyEvent.KEYCODE_BACK);
+        solo.assertCurrentActivity("Não está na activity Menu", MenuActivity.class);
     }
 }

@@ -21,10 +21,10 @@ public class ComprimentoPageObject {
 
     public ComprimentoPageObject(Solo soloRef){
         this.solo = soloRef;
-        initCampos();
+        updateCampos();
     }
 
-    private void initCampos() {
+    private void updateCampos() {
         editTextOrigem = (EditText) solo.getView(R.id.editTextOrigemComp);
         editTextDestino = (EditText) solo.getView(R.id.editTextDestinoComp);
         buttonConverter = (Button) solo.getView(R.id.buttonConverterComp);
@@ -33,7 +33,7 @@ public class ComprimentoPageObject {
 
 
     public void preencherOrigem(String valor) {
-        solo.typeText(editTextOrigem, valor);
+        solo.enterText(editTextOrigem, valor);
     }
 
     public void clickBotaoConverter() {
@@ -41,7 +41,7 @@ public class ComprimentoPageObject {
     }
 
     public String pegarValorDestino() {
-        initCampos();
+        updateCampos();
         return editTextDestino.getText().toString();
     }
 

@@ -56,7 +56,5 @@ public class MenuActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-        Logador.add(new Pessoa("bruno","1234"));
     }
 }

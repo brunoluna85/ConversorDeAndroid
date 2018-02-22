@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.com.posfacisa.conversordeandroid.exception.PessoaExistenteException;
 import br.com.posfacisa.conversordeandroid.models.Logador;
 import br.com.posfacisa.conversordeandroid.models.Pessoa;
 
@@ -41,8 +42,12 @@ public class CriarContaActivity extends AppCompatActivity {
                 String senha = editTextSenhaCriar.getText().toString();
                 String senha2 = editTextSenhaConfirm.getText().toString();
                 if (senha.equals(senha2)){
-                    Logador.add(new Pessoa(username, senha));
-                    Toast.makeText(getApplicationContext(), "Cadastrado com sucesso", Toast.LENGTH_LONG).show();
+                    try {
+                        Logador.add(new Pessoa(username, senha));
+                        Toast.makeText(getApplicationContext(), "Cadastrado com sucesso", Toast.LENGTH_LONG).show();
+                    }catch(PessoaExistenteException e){
+                        Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
+                    }
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Senhas diferentes", Toast.LENGTH_LONG).show();
