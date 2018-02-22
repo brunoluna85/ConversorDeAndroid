@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".TemperaturaActivity" />
-        <activity android:name=".ComprimentoActivity"></activity>
+        <activity android:name=".ComprimentoActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".CriarContaActivity"></activity>
     </application>
 
 </manifest>

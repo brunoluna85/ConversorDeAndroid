@@ -6,11 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import br.com.posfacisa.conversordeandroid.models.Logador;
+import br.com.posfacisa.conversordeandroid.models.Pessoa;
+
 
 public class MenuActivity extends AppCompatActivity {
 
     private Button buttonTemperatura;
     private Button buttonComprimento;
+    private Button buttonLogin;
+    private Button buttonSair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +25,8 @@ public class MenuActivity extends AppCompatActivity {
         //criando objetos dos elementos da tela
         buttonTemperatura = (Button) findViewById(R.id.buttonTemperatura);
         buttonComprimento = (Button) findViewById(R.id.buttonComprimento);
+        buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        buttonSair = (Button) findViewById(R.id.buttonSair);
 
         //criando listeners dos botões da tela
         buttonTemperatura.setOnClickListener(new View.OnClickListener() {
@@ -35,5 +42,21 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(new Intent(MenuActivity.this, ComprimentoActivity.class));
             }
         });
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, LoginActivity.class));
+            }
+        });
+
+        buttonSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        Logador.add(new Pessoa("bruno","1234"));
     }
 }

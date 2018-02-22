@@ -1,4 +1,4 @@
-package br.com.posfacisa.conversordeandroid;
+package br.com.posfacisa.conversordeandroid.models;
 
 import org.junit.After;
 import org.junit.Before;
