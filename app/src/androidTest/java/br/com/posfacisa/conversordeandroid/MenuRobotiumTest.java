@@ -47,4 +47,11 @@ public class MenuRobotiumTest extends ActivityInstrumentationTestCase2<MenuActiv
         solo.sendKey(KeyEvent.KEYCODE_BACK);
         solo.assertCurrentActivity("Não está na activity Menu", MenuActivity.class);
     }
+
+    public void testAccessLista() throws Exception{
+        solo.clickOnButton("Lista");
+        solo.assertCurrentActivity("Não está na activity Lista", ListaActivity.class);
+        solo.sendKey(KeyEvent.KEYCODE_BACK);
+        solo.assertCurrentActivity("Não está na activity Menu", MenuActivity.class);
+    }
 }
