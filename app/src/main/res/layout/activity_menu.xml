@@ -52,12 +52,12 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
 
     <Button
-        android:id="@+id/buttonVolume"
+        android:id="@+id/buttonCheckbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Volume"
+        android:text="Checkbox"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLista" />
@@ -71,7 +71,7 @@
         android:text="Velocidade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonVolume" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCheckbox" />
 
     <Button
         android:id="@+id/buttonSair"

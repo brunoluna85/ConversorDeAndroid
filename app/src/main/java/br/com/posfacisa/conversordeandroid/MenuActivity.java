@@ -16,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button buttonComprimento;
     private Button buttonLogin;
     private Button buttonLista;
+    private Button buttonCheckbox;
     private Button buttonSair;
 
     @Override
@@ -29,6 +30,7 @@ public class MenuActivity extends AppCompatActivity {
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
         buttonSair = (Button) findViewById(R.id.buttonSair);
         buttonLista = (Button) findViewById(R.id.buttonLista);
+        buttonCheckbox = (Button) findViewById(R.id.buttonCheckbox);
 
         //criando listeners dos botões da tela
         buttonTemperatura.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +58,13 @@ public class MenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MenuActivity.this, ListaActivity.class));
+            }
+        });
+
+        buttonCheckbox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MenuActivity.this, CheckboxActivity.class));
             }
         });
 

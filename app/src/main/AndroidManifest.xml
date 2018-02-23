@@ -20,7 +20,8 @@
         <activity android:name=".ComprimentoActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".CriarContaActivity" />
-        <activity android:name=".ListaActivity"></activity>
+        <activity android:name=".ListaActivity" />
+        <activity android:name=".CheckboxActivity"></activity>
     </application>
 
 </manifest>
