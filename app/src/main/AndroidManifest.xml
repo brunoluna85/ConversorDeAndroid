@@ -19,7 +19,8 @@
         <activity android:name=".TemperaturaActivity" />
         <activity android:name=".ComprimentoActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".CriarContaActivity"></activity>
+        <activity android:name=".CriarContaActivity" />
+        <activity android:name=".ListaActivity"></activity>
     </application>
 
 </manifest>

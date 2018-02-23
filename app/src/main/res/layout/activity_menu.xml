@@ -41,12 +41,12 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonComprimento" />
 
     <Button
-        android:id="@+id/buttonArea"
+        android:id="@+id/buttonLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="Area"
+        android:text="Lista"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin" />
@@ -60,7 +60,7 @@
         android:text="Volume"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonArea" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLista" />
 
     <Button
         android:id="@+id/buttonVelocidade"
